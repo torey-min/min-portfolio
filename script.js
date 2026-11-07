@@ -29,3 +29,29 @@ const observer = new IntersectionObserver((entries) => {
 }, { rootMargin: "-35% 0px -55% 0px" });
 
 sections.forEach((section) => observer.observe(section));
+
+const cvDialog = document.querySelector("#cvRequestDialog");
+const cvForm = document.querySelector("#cvRequestForm");
+const cvTrigger = document.querySelector("#openCvRequest");
+
+cvTrigger.addEventListener("click", () => cvDialog.showModal());
+document.querySelector("#closeCvRequest").addEventListener("click", () => cvDialog.close());
+document.querySelector("#cancelCvRequest").addEventListener("click", () => cvDialog.close());
+
+cvDialog.addEventListener("click", (event) => {
+  if (event.target === cvDialog) cvDialog.close();
+});
+
+cvForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!cvForm.reportValidity()) return;
+
+  const download = document.createElement("a");
+  download.href = "files/Min_Kyaw.pdf";
+  download.download = "Min_Kyaw.pdf";
+  document.body.append(download);
+  download.click();
+  download.remove();
+  cvForm.reset();
+  cvDialog.close();
+});

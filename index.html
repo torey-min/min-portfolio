@@ -25,9 +25,9 @@
       </div>
       
 <div class="nav-actions">
-  <a class="nav-cv" href="files/Min_Kyaw.pdf" download>
+  <button class="nav-cv" id="openCvRequest" type="button" aria-haspopup="dialog" aria-controls="cvRequestDialog">
     <span>↓</span> Download CV
-  </a>
+  </button>
   <a class="nav-cta" href="#contact">
     Let's talk <span>↗</span>
   </a>
@@ -235,6 +235,36 @@ developer.<u>buildSomething()</u>;</code></pre>
       </div>
     </section>
   </main>
+
+  <dialog class="cv-dialog" id="cvRequestDialog" aria-labelledby="cvDialogTitle" aria-describedby="cvDialogIntro cvPrivacyNote">
+    <div class="cv-dialog-heading">
+      <div>
+        <p class="eyebrow">CV REQUEST</p>
+        <h2 id="cvDialogTitle">A little about you</h2>
+      </div>
+      <button class="cv-dialog-close" type="button" id="closeCvRequest" aria-label="Close CV request">×</button>
+    </div>
+    <p id="cvDialogIntro" class="cv-dialog-intro">Share a few details before downloading Min's CV. Required fields are marked.</p>
+    <form id="cvRequestForm" class="cv-form">
+      <label for="cvName">Full name <span aria-hidden="true">*</span></label>
+      <input id="cvName" name="name" autocomplete="name" maxlength="100" required>
+
+      <label for="cvEmail">Email address <span aria-hidden="true">*</span></label>
+      <input id="cvEmail" name="email" type="email" autocomplete="email" maxlength="254" required>
+
+      <label for="cvOrganisation">Organisation or company <span class="optional-label">(optional)</span></label>
+      <input id="cvOrganisation" name="organisation" autocomplete="organization" maxlength="120">
+
+      <label for="cvPurpose">What would you like the CV for? <span aria-hidden="true">*</span></label>
+      <textarea id="cvPurpose" name="purpose" rows="3" maxlength="500" placeholder="For example, a job opportunity or collaboration" required></textarea>
+
+      <p class="cv-privacy" id="cvPrivacyNote">This is a static portfolio form. Your answers are not sent or saved; they only enable this download in your browser. This does not verify identity, and the form can be bypassed. <a href="mailto:mintheinkyawprd@gmail.com">Prefer to get in touch?</a></p>
+      <div class="cv-form-actions">
+        <button class="button secondary" id="cancelCvRequest" type="button">Cancel</button>
+        <button class="button primary" type="submit">Continue to download <span>↓</span></button>
+      </div>
+    </form>
+  </dialog>
 
   <footer class="container footer"><a class="logo" href="#home">MTK<span>.</span></a><p>Designed & built with curiosity.</p><a href="#home">Back to top ↑</a></footer>
   <script src="script.js"></script>
