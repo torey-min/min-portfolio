@@ -224,54 +224,12 @@ button { font: inherit; }
   font-size: 0.86rem;
   font-weight: 600;
   white-space: nowrap;
-  cursor: pointer;
-  font-family: inherit;
   transition: background 0.2s, transform 0.2s;
 }
 
 .nav-cv:hover {
   background: #79a6ff25;
   transform: translateY(-2px);
-}
-
-.nav-cv:focus-visible, .cv-dialog button:focus-visible, .cv-form input:focus-visible,
-.cv-form textarea:focus-visible, .cv-privacy a:focus-visible {
-  outline: 3px solid var(--purple);
-  outline-offset: 3px;
-}
-
-.cv-dialog {
-  width: min(540px, calc(100% - 32px));
-  max-height: min(90vh, 760px);
-  overflow-y: auto;
-  padding: 30px;
-  color: var(--text);
-  background: linear-gradient(145deg, #151e32, #0c101c);
-  border: 1px solid #9aaeff38;
-  border-radius: 18px;
-  box-shadow: 0 28px 90px #000a;
-}
-.cv-dialog::backdrop { background: #050810bf; backdrop-filter: blur(5px); }
-.cv-dialog-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
-.cv-dialog-heading .eyebrow { margin-bottom: 7px; }
-.cv-dialog h2 { margin: 0; font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: -.05em; line-height: 1.2; }
-.cv-dialog-close { width: 38px; height: 38px; flex: 0 0 auto; border: 1px solid var(--panel-border); border-radius: 10px; background: #ffffff08; color: var(--text); font-size: 1.5rem; cursor: pointer; }
-.cv-dialog-intro { margin: 12px 0 20px; color: var(--muted); font-size: .9rem; }
-.cv-form { display: grid; gap: 8px; }
-.cv-form label { margin-top: 7px; font-size: .84rem; font-weight: 600; }
-.cv-form label > span:first-child { color: #ffaaa8; }
-.cv-form .optional-label { color: var(--muted); font-size: .78rem; font-weight: 400; }
-.cv-form input, .cv-form textarea { width: 100%; padding: 11px 12px; border: 1px solid #a6b8ff35; border-radius: 10px; background: #090e19; color: var(--text); font: inherit; font-size: .9rem; }
-.cv-form input::placeholder, .cv-form textarea::placeholder { color: #8591aa; }
-.cv-form textarea { resize: vertical; min-height: 88px; }
-.cv-privacy { margin: 10px 0 4px; color: var(--muted); font-size: .76rem; line-height: 1.55; }
-.cv-privacy a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
-.cv-form-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-.cv-form-actions .button { border: 0; cursor: pointer; }
-.cv-form-actions .secondary { border: 1px solid var(--panel-border); color: var(--text); }
-@media (max-width: 480px) {
-  .cv-dialog { padding: 22px 18px; }
-  .cv-form-actions { display: grid; grid-template-columns: 1fr; }
 }
 
 @media (max-width: 650px) {
