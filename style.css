@@ -84,6 +84,7 @@ button { font: inherit; }
 .note-caption { color: var(--muted); font-size: .8rem; }
 .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .skill-card { padding: 23px; }
+.working-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .skill-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; color: var(--blue); background: #6f91ff17; font-size: 1.35rem; }
 .skill-card h3 { margin: 16px 0 5px; font-size: 1rem; }
 .skill-card p { color: var(--muted); font-size: .84rem; margin: 0 0 18px; }
@@ -322,7 +323,7 @@ button { font: inherit; }
   .quick-facts div:nth-child(3), .quick-facts div:nth-child(4) { border-bottom: 0; }
   .section { padding-block: 35px 40px; }
   .row-heading { align-items: flex-start; flex-direction: column; }
-  .about-grid, .skills-grid, .projects-grid, .games-grid { grid-template-columns: 1fr; }
+  .about-grid, .skills-grid, .projects-grid, .games-grid, .working-grid { grid-template-columns: 1fr; }
   .project-card:last-child { grid-column: auto; }
   .project-body p { min-height: 0; }
   .about-copy, .about-note { padding: 22px; }
